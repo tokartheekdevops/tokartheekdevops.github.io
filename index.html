@@ -1,400 +1,1123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kartheek Siva Kumar | Senior DevOps & Cloud Engineer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-        content="Kartheek Siva Kumar - Senior DevOps & Cloud Engineer specializing in AWS, Azure, Kubernetes, Terraform, CI/CD and DevSecOps.">
+    <title>Kartheek Siva Kumar | Senior DevOps & Cloud Engineer</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <meta name="description"
+          content="Kartheek Siva Kumar — Senior DevOps & Cloud Engineer specializing in AWS, Azure, Kubernetes, Terraform, CI/CD, DevSecOps and production cloud infrastructure.">
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f7f9fc;
-      color: #1f2937;
-      line-height: 1.6;
-    }
+    <meta name="keywords"
+          content="DevOps Engineer, AWS, Azure, Kubernetes, Terraform, Jenkins, EKS, CI/CD, DevSecOps, Cloud Engineer">
 
-    header {
-      background: #111827;
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
-    }
+    <meta name="author" content="Kartheek Siva Kumar">
 
-    header h1 {
-      font-size: 46px;
-      margin-bottom: 12px;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    header h2 {
-      font-size: 24px;
-      font-weight: 400;
-      color: #93c5fd;
-      margin-bottom: 20px;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    header p {
-      max-width: 750px;
-      margin: auto;
-      color: #d1d5db;
-      font-size: 18px;
-    }
+        body {
+            font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Helvetica, Arial, sans-serif;
+            background: #07111f;
+            color: #e8eef7;
+            line-height: 1.6;
+        }
 
-    .buttons {
-      margin-top: 30px;
-    }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    .buttons a {
-      display: inline-block;
-      margin: 6px;
-      padding: 12px 22px;
-      border-radius: 7px;
-      text-decoration: none;
-      font-weight: bold;
-      background: #2563eb;
-      color: white;
-    }
+        .container {
+            width: min(1120px, 92%);
+            margin: auto;
+        }
 
-    .buttons a.secondary {
-      background: #374151;
-    }
+        /* NAVBAR */
 
-    section {
-      max-width: 1050px;
-      margin: auto;
-      padding: 65px 20px;
-    }
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(14px);
+            background: rgba(7, 17, 31, 0.88);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
 
-    section h2 {
-      font-size: 30px;
-      margin-bottom: 25px;
-      color: #111827;
-    }
+        .nav-inner {
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-    .intro {
-      font-size: 18px;
-      max-width: 850px;
-    }
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
 
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 18px;
-    }
+        .logo span {
+            color: #55d6ff;
+        }
 
-    .skill {
-      background: white;
-      padding: 22px;
-      border-radius: 10px;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.06);
-    }
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
 
-    .skill h3 {
-      margin-bottom: 8px;
-      color: #2563eb;
-    }
+        .nav-links a {
+            color: #aebdce;
+            font-size: 14px;
+            transition: 0.2s;
+        }
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 25px;
-    }
+        .nav-links a:hover {
+            color: #ffffff;
+        }
 
-    .project {
-      background: white;
-      padding: 28px;
-      border-radius: 10px;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.06);
-    }
+        .nav-cta {
+            padding: 10px 17px;
+            border-radius: 8px;
+            background: #ffffff;
+            color: #07111f !important;
+            font-weight: 700;
+        }
 
-    .project h3 {
-      margin-bottom: 12px;
-      color: #111827;
-    }
+        /* HERO */
 
-    .toptal {
-      text-align: center;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.06);
-      padding: 50px 20px;
-    }
+        .hero {
+            min-height: 720px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-    .toptal p {
-      margin-bottom: 25px;
-      font-size: 18px;
-    }
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: rgba(37, 179, 255, 0.12);
+            filter: blur(100px);
+            border-radius: 50%;
+            top: -150px;
+            left: -150px;
+        }
 
-    footer {
-      background: #111827;
-      color: #9ca3af;
-      text-align: center;
-      padding: 30px 20px;
-    }
+        .hero-grid {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1.25fr 0.75fr;
+            gap: 70px;
+            align-items: center;
+        }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 34px;
-      }
+        .eyebrow {
+            display: inline-flex;
+            padding: 7px 13px;
+            border: 1px solid rgba(85,214,255,0.3);
+            border-radius: 30px;
+            color: #67dcff;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 22px;
+            background: rgba(85,214,255,0.05);
+        }
 
-      header h2 {
-        font-size: 20px;
-      }
-    }
-  </style>
+        h1 {
+            font-size: clamp(44px, 6vw, 76px);
+            line-height: 1.02;
+            letter-spacing: -3px;
+            margin-bottom: 22px;
+        }
+
+        h1 span {
+            color: #55d6ff;
+        }
+
+        .hero-subtitle {
+            font-size: 21px;
+            color: #b7c6d8;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .hero-description {
+            color: #8293a8;
+            max-width: 650px;
+            margin-bottom: 35px;
+            font-size: 16px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn {
+            padding: 14px 22px;
+            border-radius: 9px;
+            font-weight: 750;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.25s;
+        }
+
+        .btn-primary {
+            background: #ffffff;
+            color: #07111f;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            background: #dff7ff;
+        }
+
+        .btn-secondary {
+            border: 1px solid #31445c;
+            color: #dbe7f3;
+        }
+
+        .btn-secondary:hover {
+            border-color: #55d6ff;
+            color: #55d6ff;
+        }
+
+        /* TOPTAL CARD */
+
+        .toptal-card {
+            background: linear-gradient(
+                145deg,
+                rgba(20,35,54,0.96),
+                rgba(10,23,39,0.96)
+            );
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 22px;
+            padding: 34px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+        }
+
+        .toptal-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 28px;
+        }
+
+        .toptal-logo {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .verified {
+            font-size: 12px;
+            padding: 6px 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(85,214,255,0.3);
+            color: #67dcff;
+        }
+
+        .toptal-card h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .toptal-card p {
+            color: #94a6ba;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .hire-button {
+            display: block;
+            text-align: center;
+            background: #55d6ff;
+            color: #06101c;
+            padding: 14px;
+            border-radius: 8px;
+            font-weight: 800;
+            transition: 0.25s;
+        }
+
+        .hire-button:hover {
+            transform: translateY(-2px);
+            background: #8de5ff;
+        }
+
+        .badge-note {
+            margin-top: 15px;
+            font-size: 11px;
+            color: #64768b;
+            text-align: center;
+        }
+
+        /* TECH STRIP */
+
+        .tech-strip {
+            border-top: 1px solid rgba(255,255,255,0.07);
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            background: #091624;
+        }
+
+        .tech-list {
+            min-height: 90px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .tech-list span {
+            color: #9aacbf;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 110px 0;
+        }
+
+        .section-label {
+            color: #55d6ff;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 42px;
+            line-height: 1.15;
+            letter-spacing: -1.5px;
+            margin-bottom: 16px;
+        }
+
+        .section-description {
+            color: #8fa1b5;
+            max-width: 700px;
+            margin-bottom: 50px;
+        }
+
+        /* EXPERTISE */
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .expertise-card {
+            padding: 28px;
+            border-radius: 14px;
+            background: #0b1929;
+            border: 1px solid rgba(255,255,255,0.07);
+            transition: 0.25s;
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(85,214,255,0.35);
+        }
+
+        .icon {
+            font-size: 26px;
+            margin-bottom: 18px;
+        }
+
+        .expertise-card h3 {
+            margin-bottom: 9px;
+            font-size: 18px;
+        }
+
+        .expertise-card p {
+            color: #8395aa;
+            font-size: 14px;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            padding: 9px 14px;
+            border-radius: 7px;
+            background: #0b1929;
+            border: 1px solid #203247;
+            color: #b8c7d8;
+            font-size: 13px;
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .project {
+            padding: 34px;
+            background: #0b1929;
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 16px;
+        }
+
+        .project-number {
+            color: #55d6ff;
+            font-weight: 800;
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .project h3 {
+            font-size: 24px;
+            margin-bottom: 14px;
+        }
+
+        .project p {
+            color: #8ea0b4;
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .project-tags span {
+            font-size: 11px;
+            padding: 6px 9px;
+            background: #122337;
+            border-radius: 5px;
+            color: #9bb0c6;
+        }
+
+        /* EXPERIENCE */
+
+        .experience {
+            border-left: 2px solid #203247;
+            padding-left: 28px;
+        }
+
+        .experience-item {
+            margin-bottom: 45px;
+            position: relative;
+        }
+
+        .experience-item::before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #55d6ff;
+            left: -34px;
+            top: 7px;
+        }
+
+        .experience-date {
+            color: #55d6ff;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 7px;
+        }
+
+        .experience h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .experience-company {
+            color: #8496aa;
+            margin-bottom: 12px;
+        }
+
+        .experience p {
+            color: #8fa1b5;
+            max-width: 800px;
+        }
+
+        /* CTA */
+
+        .cta {
+            padding: 80px 40px;
+            text-align: center;
+            background: linear-gradient(
+                135deg,
+                #10263c,
+                #0b1727
+            );
+            border: 1px solid rgba(85,214,255,0.18);
+            border-radius: 22px;
+        }
+
+        .cta h2 {
+            font-size: 44px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            color: #91a3b7;
+            max-width: 620px;
+            margin: 0 auto 30px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid rgba(255,255,255,0.07);
+            padding: 35px 0;
+            color: #66788d;
+            font-size: 13px;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a:hover {
+            color: #55d6ff;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 90px 0;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .expertise-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-list {
+                justify-content: center;
+                padding: 25px 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            h1 {
+                font-size: 46px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            section {
+                padding: 75px 0;
+            }
+
+            .section-title {
+                font-size: 34px;
+            }
+
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta {
+                padding: 55px 20px;
+            }
+
+            .cta h2 {
+                font-size: 34px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Kartheek Siva Kumar</h1>
+<!-- NAVIGATION -->
 
-  <h2>Senior DevOps & Cloud Engineer</h2>
+<nav>
+    <div class="container nav-inner">
 
-  <p>
-    Cloud infrastructure, Kubernetes, CI/CD, Infrastructure as Code,
-    DevSecOps and production engineering across AWS and Microsoft Azure.
-  </p>
+        <a href="#" class="logo">
+            Kartheek<span>.</span>
+        </a>
 
-  <div class="buttons">
-    <a href="https://www.toptal.com/developers/resume/kartheek-siva-kumar-boddu#ZZnZQw"
-       target="_blank">
-      Hire Me on Toptal
-    </a>
+        <div class="nav-links">
+            <a href="#expertise">Expertise</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
 
-    <a class="secondary"
-       href="https://github.com/tokartheekdevops"
-       target="_blank">
-      GitHub
-    </a>
-  </div>
-</header>
+            <a
+                href="https://www.toptal.com/developers/resume/kartheek-siva-kumar-boddu#ZZnZQw"
+                target="_blank"
+                class="nav-cta">
+                Hire Me
+            </a>
+        </div>
 
-<section>
-  <h2>About Me</h2>
-
-  <p class="intro">
-    I am a Senior DevOps & Cloud Engineer focused on designing,
-    automating and operating reliable cloud platforms. My work spans
-    AWS, Microsoft Azure, Kubernetes, Terraform, CI/CD automation,
-    observability, cloud security and production troubleshooting.
-  </p>
-</section>
-
-<section>
-  <h2>Core Expertise</h2>
-
-  <div class="skills">
-
-    <div class="skill">
-      <h3>☁️ Cloud</h3>
-      <p>AWS, Microsoft Azure, VPC, VNet, EC2, S3, RDS, Load Balancers and CloudWatch.</p>
     </div>
+</nav>
 
-    <div class="skill">
-      <h3>☸️ Kubernetes</h3>
-      <p>Kubernetes, Amazon EKS, AKS, Helm, container orchestration and platform operations.</p>
-    </div>
 
-    <div class="skill">
-      <h3>🏗️ Infrastructure as Code</h3>
-      <p>Terraform, CloudFormation and automated cloud infrastructure provisioning.</p>
-    </div>
+<!-- HERO -->
 
-    <div class="skill">
-      <h3>🔄 CI/CD</h3>
-      <p>Jenkins, GitHub Actions, Azure DevOps and automated deployment pipelines.</p>
-    </div>
+<header class="hero">
 
-    <div class="skill">
-      <h3>🐳 Containers</h3>
-      <p>Docker, containerized workloads, image management and deployment automation.</p>
-    </div>
+    <div class="container hero-grid">
 
-    <div class="skill">
-      <h3>📊 Observability</h3>
-      <p>Prometheus, Grafana, CloudWatch, Azure Monitor and production monitoring.</p>
-    </div>
+        <div>
 
-    <div class="skill">
-      <h3>🔐 Security</h3>
-      <p>IAM, KMS, Azure Key Vault, security controls, image scanning and DevSecOps.</p>
-    </div>
+            <div class="eyebrow">
+                SENIOR DEVOPS & CLOUD ENGINEER
+            </div>
 
-    <div class="skill">
-      <h3>🐍 Automation</h3>
-      <p>Python, Bash, Git automation and operational troubleshooting.</p>
-    </div>
+            <h1>
+                Building reliable<br>
+                <span>cloud infrastructure.</span>
+            </h1>
 
-  </div>
-</section>
+            <div class="hero-subtitle">
+                AWS · Azure · Kubernetes · Terraform · CI/CD · DevSecOps
+            </div>
 
-<section>
-  <h2>Selected Projects</h2>
+            <p class="hero-description">
+                I design, automate and operate cloud infrastructure and
+                deployment platforms for enterprise workloads — from
+                infrastructure as code and Kubernetes to CI/CD,
+                observability and production troubleshooting.
+            </p>
 
-  <div class="projects">
+            <div class="buttons">
 
-    <div class="project">
-      <h3>Healthcare Cloud Infrastructure & DevOps Platform</h3>
+                <a
+                    href="https://www.toptal.com/developers/resume/kartheek-siva-kumar-boddu#ZZnZQw"
+                    target="_blank"
+                    class="btn btn-primary">
+                    Hire Me on Toptal →
+                </a>
 
-      <p>
-        Designed and operated secure cloud infrastructure for healthcare
-        applications across AWS and Azure. Implemented Terraform,
-        Jenkins, GitHub Actions, Kubernetes, monitoring, IAM,
-        encryption and production support practices.
-      </p>
-    </div>
+                <a
+                    href="https://github.com/tokartheekdevops"
+                    target="_blank"
+                    class="btn btn-secondary">
+                    View GitHub
+                </a>
 
-    <div class="project">
-      <h3>E-Commerce Marketplace & Order Management Platform</h3>
-
-      <p>
-        Built and supported cloud infrastructure and CI/CD automation
-        for an e-commerce platform using AWS, Azure, Terraform, Docker,
-        Kubernetes, Jenkins, GitHub Actions, Helm, monitoring and
-        production deployment strategies.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <div class="toptal">
-
-    <h2>🏆 Toptal</h2>
-
-    <p>
-      Toptal-vetted DevOps & Cloud Engineer
-    </p>
-
-    <!-- Official Toptal badge -->
-    <div id="r">
-      <style>
-        @import "https://use.typekit.net/kmj5qkr.css";
-
-        :root {
-          --h: polygon(
-            50% 0,
-            100% 24%,
-            100% 76%,
-            50% 100%,
-            0 76%,
-            0 24%
-          );
-        }
-
-        .h {
-          display: inline-block;
-          background: #25a9ef;
-          padding: 6px;
-          clip-path: var(--h);
-        }
-
-        .a {
-          width: 200px;
-          padding: 24px 0 40px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 8px;
-          color: #204ecf;
-          text-align: center;
-          background: white;
-          clip-path: var(--h);
-        }
-
-        .b {
-          margin: 0;
-          font-size: 19px;
-          font-weight: 700;
-          line-height: 1;
-        }
-
-        .c {
-          width: 120px;
-          height: 1px;
-          background: #25a9ef;
-        }
-
-        .d {
-          font-size: 16px;
-          margin-bottom: -6px;
-        }
-
-        .f {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          padding: 4px 20px;
-          border-radius: 6px;
-          background: #296bff;
-          color: white;
-          font-size: 16px;
-          font-weight: 500;
-        }
-      </style>
-
-      <div class="h">
-
-        <div class="a">
-
-          <div style="font-size:30px;color:#00c3ff;">★★★★★</div>
-
-          <h3 class="b">TOP 3% TALENT</h3>
-
-          <div class="c"></div>
-
-          <span class="d">Vetted by</span>
-
-          <div style="font-size:28px;font-weight:700;color:#262d3d;">
-            Toptal
-          </div>
-
-          <a
-            target="_blank"
-            class="f"
-            href="https://www.toptal.com/developers/resume/kartheek-siva-kumar-boddu#ZZnZQw">
-            Hire me
-          </a>
+            </div>
 
         </div>
 
-      </div>
+
+        <!-- TOPTAL -->
+
+        <div class="toptal-card">
+
+            <div class="toptal-top">
+
+                <div class="toptal-logo">
+                    toptal
+                </div>
+
+                <div class="verified">
+                    VERIFIED PROFILE
+                </div>
+
+            </div>
+
+            <h3>
+                Senior DevOps<br>
+                & Cloud Engineer
+            </h3>
+
+            <p>
+                Available for cloud infrastructure, Kubernetes,
+                DevOps automation, CI/CD and platform engineering
+                engagements.
+            </p>
+
+            <!-- Toptal badge area -->
+
+            <div style="
+                border:1px solid rgba(255,255,255,.12);
+                border-radius:12px;
+                padding:20px;
+                margin-bottom:20px;
+                text-align:center;
+                background:rgba(255,255,255,.025);
+            ">
+
+                <div style="
+                    font-size:12px;
+                    letter-spacing:2px;
+                    font-weight:800;
+                    color:#55d6ff;
+                    margin-bottom:7px;
+                ">
+                    TOPTAL
+                </div>
+
+                <div style="
+                    font-size:20px;
+                    font-weight:800;
+                ">
+                    Top-Tier Engineering Talent
+                </div>
+
+                <div style="
+                    font-size:12px;
+                    color:#718398;
+                    margin-top:5px;
+                ">
+                    DevOps · Cloud · Kubernetes
+                </div>
+
+            </div>
+
+            <a
+                href="https://www.toptal.com/developers/resume/kartheek-siva-kumar-boddu#ZZnZQw"
+                target="_blank"
+                class="hire-button">
+                Hire Me on Toptal
+            </a>
+
+            <div class="badge-note">
+                View my Toptal profile and availability
+            </div>
+
+        </div>
+
     </div>
 
-  </div>
+</header>
+
+
+<!-- TECHNOLOGY STRIP -->
+
+<div class="tech-strip">
+
+    <div class="container tech-list">
+
+        <span>AWS</span>
+        <span>AZURE</span>
+        <span>KUBERNETES</span>
+        <span>TERRAFORM</span>
+        <span>JENKINS</span>
+        <span>GITHUB ACTIONS</span>
+        <span>DOCKER</span>
+        <span>GRAFANA</span>
+
+    </div>
+
+</div>
+
+
+<!-- EXPERTISE -->
+
+<section id="expertise">
+
+    <div class="container">
+
+        <div class="section-label">
+            What I Do
+        </div>
+
+        <h2 class="section-title">
+            Cloud engineering built for production.
+        </h2>
+
+        <p class="section-description">
+            I help engineering teams automate infrastructure, improve
+            deployment reliability and operate scalable cloud platforms.
+        </p>
+
+
+        <div class="expertise-grid">
+
+            <div class="expertise-card">
+                <div class="icon">☁</div>
+                <h3>Cloud Infrastructure</h3>
+                <p>
+                    AWS and Azure infrastructure, networking,
+                    IAM, load balancing, storage and compute.
+                </p>
+            </div>
+
+            <div class="expertise-card">
+                <div class="icon">⚙</div>
+                <h3>Infrastructure as Code</h3>
+                <p>
+                    Terraform and CloudFormation for repeatable,
+                    version-controlled infrastructure.
+                </p>
+            </div>
+
+            <div class="expertise-card">
+                <div class="icon">◈</div>
+                <h3>Kubernetes & Containers</h3>
+                <p>
+                    Kubernetes, EKS, AKS, Docker, Helm and
+                    production container platforms.
+                </p>
+            </div>
+
+            <div class="expertise-card">
+                <div class="icon">⇢</div>
+                <h3>CI/CD Automation</h3>
+                <p>
+                    Jenkins, GitHub Actions and Azure DevOps
+                    pipelines for reliable software delivery.
+                </p>
+            </div>
+
+            <div class="expertise-card">
+                <div class="icon">◉</div>
+                <h3>Observability</h3>
+                <p>
+                    Prometheus, Grafana, CloudWatch and Azure Monitor
+                    for monitoring and operational visibility.
+                </p>
+            </div>
+
+            <div class="expertise-card">
+                <div class="icon">◒</div>
+                <h3>DevSecOps</h3>
+                <p>
+                    IAM, encryption, security controls,
+                    vulnerability scanning and secure delivery.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
+
+
+<!-- SKILLS -->
 
 <section>
-  <h2>Contact</h2>
 
-  <p>
-    <strong>GitHub:</strong>
-    <a href="https://github.com/tokartheekdevops" target="_blank">
-      github.com/tokartheekdevops
-    </a>
-  </p>
+    <div class="container">
 
-  <p>
-    <strong>Toptal:</strong>
-    <a href="https://www.toptal.com/developers/resume/kartheek-siva-kumar-boddu#ZZnZQw"
-       target="_blank">
-      View my Toptal profile
-    </a>
-  </p>
+        <div class="section-label">
+            Technical Stack
+        </div>
+
+        <h2 class="section-title">
+            Tools I work with
+        </h2>
+
+        <p class="section-description">
+            A practical engineering stack focused on cloud automation,
+            platform reliability and production operations.
+        </p>
+
+        <div class="skills">
+
+            <span class="skill">AWS</span>
+            <span class="skill">Microsoft Azure</span>
+            <span class="skill">Kubernetes</span>
+            <span class="skill">Amazon EKS</span>
+            <span class="skill">AKS</span>
+            <span class="skill">Docker</span>
+            <span class="skill">Terraform</span>
+            <span class="skill">CloudFormation</span>
+            <span class="skill">Jenkins</span>
+            <span class="skill">GitHub Actions</span>
+            <span class="skill">Azure DevOps</span>
+            <span class="skill">Helm</span>
+            <span class="skill">ArgoCD</span>
+            <span class="skill">Prometheus</span>
+            <span class="skill">Grafana</span>
+            <span class="skill">CloudWatch</span>
+            <span class="skill">Azure Monitor</span>
+            <span class="skill">Python</span>
+            <span class="skill">Bash</span>
+            <span class="skill">Git</span>
+            <span class="skill">IAM</span>
+            <span class="skill">KMS</span>
+            <span class="skill">SonarQube</span>
+            <span class="skill">Trivy</span>
+            <span class="skill">GitOps</span>
+            <span class="skill">DevSecOps</span>
+
+        </div>
+
+    </div>
+
 </section>
 
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <div class="section-label">
+            Selected Work
+        </div>
+
+        <h2 class="section-title">
+            Production engineering experience.
+        </h2>
+
+        <p class="section-description">
+            Examples of cloud and DevOps platforms supporting
+            enterprise workloads.
+        </p>
+
+
+        <div class="projects">
+
+            <div class="project">
+
+                <div class="project-number">
+                    PROJECT 01 · HEALTHCARE
+                </div>
+
+                <h3>
+                    Healthcare Cloud Infrastructure
+                </h3>
+
+                <p>
+                    Designed and operated secure cloud infrastructure
+                    for healthcare applications handling sensitive data.
+                    Automated AWS and Azure infrastructure using Terraform,
+                    implemented CI/CD with Jenkins and GitHub Actions,
+                    and deployed containerized workloads on Kubernetes.
+                </p>
+
+                <div class="project-tags">
+                    <span>AWS</span>
+                    <span>Azure</span>
+                    <span>Terraform</span>
+                    <span>Kubernetes</span>
+                    <span>Jenkins</span>
+                    <span>GitHub Actions</span>
+                    <span>CloudWatch</span>
+                    <span>Grafana</span>
+                </div>
+
+            </div>
+
+
+            <div class="project">
+
+                <div class="project-number">
+                    PROJECT 02 · E-COMMERCE
+                </div>
+
+                <h3>
+                    E-Commerce Platform
+                </h3>
+
+                <p>
+                    Supported cloud infrastructure and deployment platforms
+                    for an enterprise e-commerce marketplace and order
+                    management platform using AWS, Azure, Kubernetes,
+                    Terraform and automated CI/CD pipelines.
+                </p>
+
+                <div class="project-tags">
+                    <span>AWS</span>
+                    <span>Azure</span>
+                    <span>EKS</span>
+                    <span>AKS</span>
+                    <span>Docker</span>
+                    <span>Terraform</span>
+                    <span>Helm</span>
+                    <span>GitOps</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+    <div class="container">
+
+        <div class="section-label">
+            Experience
+        </div>
+
+        <h2 class="section-title">
+            Senior DevOps & Cloud Engineering
+        </h2>
+
+        <p class="section-description">
+            Enterprise experience across cloud infrastructure,
+            automation, Kubernetes and production operations.
+        </p>
+
+
+        <div class="experience">
+
+            <div class="experience-item">
+
+                <div class="experience-date">
+                    2018 — PRESENT
+                </div>
+
+                <h3>
+                    DevOps / Cloud Engineer
+                </h3>
+
+                <div class="experience-company">
+                    Cognizant
+                </div>
+
+                <p>
+                    Designed, automated and supported enterprise cloud
+                    infrastructure across AWS and Azure. Built CI/CD
+                    pipelines, Infrastructure as Code, Kubernetes platforms,
+                    monitoring and security controls while supporting
+                    production workloads and resolving operational incidents.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL CTA -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="cta">
+
+            <div class="section-label">
+                Let's Work Together
+            </div>
+
+            <h2>
+                Need a DevOps engineer?
+            </h2>
+
+            <p>
+                If you're building cloud infrastructure, modernizing
+                deployments, adopting Kubernetes or improving production
+                reliability, let's talk.
+            </p>
+
+            <div class="buttons" style="justify-content:center;">
+
+                <a
+                    href="https://www.toptal.com/developers/resume/kartheek-siva-kumar-boddu#ZZnZQw"
+                    target="_blank"
+                    class="btn btn-primary">
+                    Hire Me on Toptal →
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    class="btn btn-secondary">
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
 <footer>
-  © 2026 Kartheek Siva Kumar · Senior DevOps & Cloud Engineer
+
+    <div class="container footer-inner">
+
+        <div>
+            © 2026 Kartheek Siva Kumar. Senior DevOps & Cloud Engineer.
+        </div>
+
+        <div class="footer-links">
+
+            <a href="https://github.com/tokartheekdevops"
+               target="_blank">
+                GitHub
+            </a>
+
+            <a
+                href="https://www.toptal.com/developers/resume/kartheek-siva-kumar-boddu#ZZnZQw"
+                target="_blank">
+                Toptal
+            </a>
+
+        </div>
+
+    </div>
+
 </footer>
 
 </body>
