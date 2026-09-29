@@ -1,1 +1,0 @@
-# tokartheekdevops.github.io
