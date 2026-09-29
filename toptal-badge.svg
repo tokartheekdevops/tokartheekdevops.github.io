@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="300" viewBox="0 0 260 300">
+<polygon points="130,2 258,74 258,226 130,298 2,226 2,74" fill="#25a9ef"/>
+<polygon points="130,9 250,78 250,222 130,291 10,222 10,78" fill="#fff"/>
+<text x="130" y="48" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#00aeea">★★★★★</text>
+<text x="130" y="82" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#204ecf">TOP 3% TALENT</text>
+<line x1="70" y1="101" x2="190" y2="101" stroke="#25a9ef" stroke-width="2"/>
+<text x="130" y="128" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#204ecf">Vetted by</text>
+<text x="130" y="168" text-anchor="middle" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#262d3d">Toptal</text>
+<rect x="67" y="205" width="126" height="42" rx="7" fill="#296bff"/>
+<text x="130" y="232" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#fff" font-weight="600">Hire me</text>
+</svg>
